@@ -93,9 +93,9 @@ POST_UNINSTALL = :
 build_triplet = aarch64-unknown-linux-gnu
 host_triplet = aarch64-unknown-linux-gnu
 am__append_1 = src/net/URL.c 
-am__append_2 = src/db/mysql/MysqlConnection.c \
-                     src/db/mysql/MysqlResultSet.c \
-                     src/db/mysql/MysqlPreparedStatement.c
+# am__append_2 = src/db/mysql/MysqlConnection.c \
+#                      src/db/mysql/MysqlResultSet.c \
+#                      src/db/mysql/MysqlPreparedStatement.c
 
 #am__append_3 = src/db/postgresql/PostgresqlConnection.c \
 #                     src/db/postgresql/PostgresqlResultSet.c \
@@ -106,10 +106,10 @@ am__append_2 = src/db/mysql/MysqlConnection.c \
 #                     src/db/sqlite/SQLitePreparedStatement.c \
 #                     src/db/sqlite/SQLiteAdapter.c
 
-#am__append_5 = src/db/oracle/OracleConnection.c \
-#                     src/db/oracle/OracleResultSet.c \
-#                     src/db/oracle/OraclePreparedStatement.c \
-#                     src/db/oracle/OracleAdapter.c
+am__append_5 = src/db/oracle/OracleConnection.c \
+                    src/db/oracle/OracleResultSet.c \
+                    src/db/oracle/OraclePreparedStatement.c \
+                    src/db/oracle/OracleAdapter.c
 
 subdir = .
 ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
@@ -179,9 +179,9 @@ am__libzdb_la_SOURCES_DIST = src/util/Str.c src/util/Vector.c \
 	src/db/oracle/OracleAdapter.c
 am__dirstamp = $(am__leading_dot)dirstamp
 am__objects_1 = src/net/URL.lo
-am__objects_2 = src/db/mysql/MysqlConnection.lo \
-	src/db/mysql/MysqlResultSet.lo \
-	src/db/mysql/MysqlPreparedStatement.lo
+# am__objects_2 = src/db/mysql/MysqlConnection.lo \
+# 	src/db/mysql/MysqlResultSet.lo \
+# 	src/db/mysql/MysqlPreparedStatement.lo
 #am__objects_3 = src/db/postgresql/PostgresqlConnection.lo \
 #	src/db/postgresql/PostgresqlResultSet.lo \
 #	src/db/postgresql/PostgresqlPreparedStatement.lo
@@ -189,10 +189,10 @@ am__objects_2 = src/db/mysql/MysqlConnection.lo \
 #	src/db/sqlite/SQLiteResultSet.lo \
 #	src/db/sqlite/SQLitePreparedStatement.lo \
 #	src/db/sqlite/SQLiteAdapter.lo
-#am__objects_5 = src/db/oracle/OracleConnection.lo \
-#	src/db/oracle/OracleResultSet.lo \
-#	src/db/oracle/OraclePreparedStatement.lo \
-#	src/db/oracle/OracleAdapter.lo
+am__objects_5 = src/db/oracle/OracleConnection.lo \
+	src/db/oracle/OracleResultSet.lo \
+	src/db/oracle/OraclePreparedStatement.lo \
+	src/db/oracle/OracleAdapter.lo
 am_libzdb_la_OBJECTS = src/util/Str.lo src/util/Vector.lo \
 	src/util/StringBuffer.lo src/system/Mem.lo \
 	src/system/System.lo src/system/Time.lo \
@@ -349,14 +349,14 @@ CC = gcc
 CCDEPMODE = depmode=none
 CFLAGS = -Wno-address -Wno-pointer-sign -g -O2 -Wall -Wunused -Wno-unused-label -funsigned-char -std=gnu11
 CPP = gcc -E
-CPPFLAGS = -I/usr/include/mysql 
+CPPFLAGS = -I/root/dci/include
 CXX = g++
 CXXCPP = g++ -E
 CXXDEPMODE = depmode=none
 CXXFLAGS = -g -O2
 CYGPATH_W = echo
-DBCPPFLAGS =  -I/usr/include/mysql
-DBLDFLAGS =  -L/usr/lib64/mysql -lmysqlclient -lpthread -ldl -lssl -lcrypto -lresolv -lm -lrt
+DBCPPFLAGS =  -I/root/dci/include
+DBLDFLAGS =  -L/usr/lib64/mysql -ldmdci -lpthread -ldl -lssl -lcrypto -lresolv -lm -lrt
 DEFS = -DHAVE_CONFIG_H
 DEPDIR = .deps
 DLLTOOL = false
@@ -375,7 +375,7 @@ INSTALL_PROGRAM = ${INSTALL}
 INSTALL_SCRIPT = ${INSTALL}
 INSTALL_STRIP_PROGRAM = $(install_sh) -c -s
 LD = /usr/bin/ld
-LDFLAGS = -L/usr/lib64/mysql -lmysqlclient -lpthread -ldl -lssl -lcrypto -lresolv -lm -lrt 
+LDFLAGS = -L/usr/lib64/mysql -ldmdci -lpthread -ldl -lssl -lcrypto -lresolv -lm -lrt 
 LEX = flex
 LEXLIB = 
 LEX_OUTPUT_ROOT = lex.yy
