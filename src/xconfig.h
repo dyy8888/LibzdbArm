@@ -38,7 +38,7 @@
 /* #undef HAVE_LIBSSL */
 
 /* Define to 1 if you have the <mysql.h> header file. */
-#define HAVE_MYSQL_H 1
+#define HAVE_ORACLE 1
 
 /* Define to 1 to enable oracle */
 /* #undef HAVE_ORACLE */
