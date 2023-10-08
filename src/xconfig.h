@@ -113,7 +113,7 @@
 #define PACKAGE_NAME "libzdb"
 
 /* Define to 1 to package protect (hide) non-api objects */
-#define PACKAGE_PROTECTED 1
+/* #undef PACKAGE_PROTECTED */
 
 /* Define to the full name and version of this package. */
 #define PACKAGE_STRING "libzdb 3.2"

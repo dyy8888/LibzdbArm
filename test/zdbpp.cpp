@@ -1,7 +1,7 @@
 #include <iostream>
 #include <string>
 #include <map>
-
+#include <cassert>
 #include "zdbpp.h"
 using namespace zdb;
 

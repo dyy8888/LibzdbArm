@@ -93,9 +93,9 @@ POST_UNINSTALL = :
 build_triplet = aarch64-unknown-linux-gnu
 host_triplet = aarch64-unknown-linux-gnu
 am__append_1 = src/net/URL.c 
-# am__append_2 = src/db/mysql/MysqlConnection.c \
-#                      src/db/mysql/MysqlResultSet.c \
-#                      src/db/mysql/MysqlPreparedStatement.c
+#am__append_2 = src/db/mysql/MysqlConnection.c \
+#                     src/db/mysql/MysqlResultSet.c \
+#                     src/db/mysql/MysqlPreparedStatement.c
 
 #am__append_3 = src/db/postgresql/PostgresqlConnection.c \
 #                     src/db/postgresql/PostgresqlResultSet.c \
@@ -107,9 +107,9 @@ am__append_1 = src/net/URL.c
 #                     src/db/sqlite/SQLiteAdapter.c
 
 am__append_5 = src/db/oracle/OracleConnection.c \
-                    src/db/oracle/OracleResultSet.c \
-                    src/db/oracle/OraclePreparedStatement.c \
-                    src/db/oracle/OracleAdapter.c
+                     src/db/oracle/OracleResultSet.c \
+                     src/db/oracle/OraclePreparedStatement.c \
+                     src/db/oracle/OracleAdapter.c
 
 subdir = .
 ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
@@ -179,9 +179,9 @@ am__libzdb_la_SOURCES_DIST = src/util/Str.c src/util/Vector.c \
 	src/db/oracle/OracleAdapter.c
 am__dirstamp = $(am__leading_dot)dirstamp
 am__objects_1 = src/net/URL.lo
-# am__objects_2 = src/db/mysql/MysqlConnection.lo \
-# 	src/db/mysql/MysqlResultSet.lo \
-# 	src/db/mysql/MysqlPreparedStatement.lo
+#am__objects_2 = src/db/mysql/MysqlConnection.lo \
+#	src/db/mysql/MysqlResultSet.lo \
+#	src/db/mysql/MysqlPreparedStatement.lo
 #am__objects_3 = src/db/postgresql/PostgresqlConnection.lo \
 #	src/db/postgresql/PostgresqlResultSet.lo \
 #	src/db/postgresql/PostgresqlPreparedStatement.lo
@@ -189,6 +189,7 @@ am__objects_1 = src/net/URL.lo
 #	src/db/sqlite/SQLiteResultSet.lo \
 #	src/db/sqlite/SQLitePreparedStatement.lo \
 #	src/db/sqlite/SQLiteAdapter.lo
+
 am__objects_5 = src/db/oracle/OracleConnection.lo \
 	src/db/oracle/OracleResultSet.lo \
 	src/db/oracle/OraclePreparedStatement.lo \
@@ -337,26 +338,26 @@ distuninstallcheck_listfiles = find . -type f -print
 am__distuninstallcheck_listfiles = $(distuninstallcheck_listfiles) \
   | sed 's|^\./|$(prefix)/|' | grep -v '$(infodir)/dir$$'
 distcleancheck_listfiles = find . -type f -print
-ACLOCAL = ${SHELL} /root/libzdb-3.2/config/missing aclocal-1.16
+ACLOCAL = ${SHELL} /root/LibzdbArm-main/config/missing aclocal-1.16
 AMTAR = $${TAR-tar}
 AM_DEFAULT_VERBOSITY = 1
 AR = ar
-AUTOCONF = ${SHELL} /root/libzdb-3.2/config/missing autoconf
-AUTOHEADER = ${SHELL} /root/libzdb-3.2/config/missing autoheader
-AUTOMAKE = ${SHELL} /root/libzdb-3.2/config/missing automake-1.16
+AUTOCONF = ${SHELL} /root/LibzdbArm-main/config/missing autoconf
+AUTOHEADER = ${SHELL} /root/LibzdbArm-main/config/missing autoheader
+AUTOMAKE = ${SHELL} /root/LibzdbArm-main/config/missing automake-1.16
 AWK = gawk
 CC = gcc
 CCDEPMODE = depmode=none
 CFLAGS = -Wno-address -Wno-pointer-sign -g -O2 -Wall -Wunused -Wno-unused-label -funsigned-char -std=gnu11
 CPP = gcc -E
-CPPFLAGS = -I/root/dci/include
+CPPFLAGS = -I/root/dmoci/include 
 CXX = g++
 CXXCPP = g++ -E
 CXXDEPMODE = depmode=none
 CXXFLAGS = -g -O2
 CYGPATH_W = echo
-DBCPPFLAGS =  -I/root/dci/include
-DBLDFLAGS =  -L/usr/lib64/mysql -ldmdci -lpthread -ldl -lssl -lcrypto -lresolv -lm -lrt
+DBCPPFLAGS =  -I/root/dmoci/include
+DBLDFLAGS =  -L/usr/lib64/mysql -ldmoci -lpthread -ldl -lssl -lcrypto -lresolv -lm -lrt
 DEFS = -DHAVE_CONFIG_H
 DEPDIR = .deps
 DLLTOOL = false
@@ -375,7 +376,7 @@ INSTALL_PROGRAM = ${INSTALL}
 INSTALL_SCRIPT = ${INSTALL}
 INSTALL_STRIP_PROGRAM = $(install_sh) -c -s
 LD = /usr/bin/ld
-LDFLAGS = -L/usr/lib64/mysql -ldmdci -lpthread -ldl -lssl -lcrypto -lresolv -lm -lrt 
+LDFLAGS = -L/usr/lib64/mysql -ldmoci -lpthread -ldl -lssl -lcrypto -lresolv -lm -lrt 
 LEX = flex
 LEXLIB = 
 LEX_OUTPUT_ROOT = lex.yy
@@ -386,7 +387,7 @@ LIPO =
 LN_S = ln -s
 LTLIBOBJS = 
 LT_SYS_LIBRARY_PATH = 
-MAKEINFO = ${SHELL} /root/libzdb-3.2/config/missing makeinfo
+MAKEINFO = ${SHELL} /root/LibzdbArm-main/config/missing makeinfo
 MANIFEST_TOOL = :
 MKDIR_P = /usr/bin/mkdir -p
 MYSQLCONFIG = /usr/bin/mysql_config
@@ -414,12 +415,12 @@ SED = /usr/bin/sed
 SET_MAKE = 
 SHELL = /bin/sh
 STRIP = strip
-UNIT_TEST = 
+UNIT_TEST = test
 VERSION = 3.2
-abs_builddir = /root/libzdb-3.2
-abs_srcdir = /root/libzdb-3.2
-abs_top_builddir = /root/libzdb-3.2
-abs_top_srcdir = /root/libzdb-3.2
+abs_builddir = /root/LibzdbArm-main
+abs_srcdir = /root/LibzdbArm-main
+abs_top_builddir = /root/LibzdbArm-main
+abs_top_srcdir = /root/LibzdbArm-main
 ac_ct_AR = ar
 ac_ct_CC = gcc
 ac_ct_CXX = g++
@@ -449,7 +450,7 @@ host_vendor = unknown
 htmldir = ${docdir}
 includedir = ${prefix}/include
 infodir = ${datarootdir}/info
-install_sh = ${SHELL} /root/libzdb-3.2/config/install-sh
+install_sh = ${SHELL} /root/LibzdbArm-main/config/install-sh
 libdir = ${exec_prefix}/lib
 libexecdir = ${exec_prefix}/libexec
 localedir = ${datarootdir}/locale
