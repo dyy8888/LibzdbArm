@@ -401,7 +401,7 @@ static const void *_getBlob(T R, int columnIndex, int *size) {
                 THROW(SQLException, "%s", OraclePreparedStatement_getLastError(R->lastError, R->err));
         }
         *size = R->columns[i].length = (int)total_bytes;
-        printf("-------------------%d,%d\n",R->columns[i].length,R->columns[i].name);
+       // printf("-------------------%d,%d\n",R->columns[i].length,R->columns[i].name);
         return (const void *)R->columns[i].buffer;
 }
 

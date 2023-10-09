@@ -154,10 +154,10 @@ static void _setString(T P, int parameterIndex, const char *x) {
         
         P->lastError = OCIBindByPos(P->stmt, &P->params[i].bind, P->err, parameterIndex, (char *)P->params[i].type.string,
                                     (int)P->params[i].length, SQLT_CHR, &P->params[i].is_null, 0, 0, 0, 0, OCI_DEFAULT);
-        printf("在setstring中查看:,index:%d,i的值:%d,绑定后的内容:%s\n",parameterIndex,i,(char *)P->params[i].type.string);
-        if (i==2){
-               printf("i==2单独打印上一个参数的值:%s\n",(char *)P->params[i-1].type.string);
-        }
+       // printf("在setstring中查看:,index:%d,i的值:%d,绑定后的内容:%s\n",parameterIndex,i,(char *)P->params[i].type.string);
+       // if (i==2){
+         //      printf("i==2单独打印上一个参数的值:%s\n",(char *)P->params[i-1].type.string);
+       // }
         if (P->lastError != OCI_SUCCESS && P->lastError != OCI_SUCCESS_WITH_INFO)
         {      
                 THROW(SQLException, "%s", OraclePreparedStatement_getLastError(P->lastError, P->err));
@@ -181,12 +181,12 @@ static void _setLLong(T P, int parameterIndex, const char *x,int size) {
         
         P->lastError = OCIBindByPos(P->stmt, &P->params[i].bind, P->err, parameterIndex, (char *)P->params[i].type.string,
                                     (int)P->params[i].length, SQLT_CHR, &P->params[i].is_null, 0, 0, 0, 0, OCI_DEFAULT);
-        printf("在setstring中查看:,index:%d,i的值:%d,绑定后的数组长度:%d\n",parameterIndex,i,(char *)P->params[i].length);
+        //printf("在setstring中查看:,index:%d,i的值:%d,绑定后的数组长度:%d\n",parameterIndex,i,(char *)P->params[i].length);
         //if (i==2){
          //       printf("单独打印上一个参数的值:%s\n",(char *)P->params[i-1].type.string);
         //}
         if (P->lastError != OCI_SUCCESS && P->lastError != OCI_SUCCESS_WITH_INFO)
-        {        printf("异常\n");
+        {        //printf("异常\n");
                 THROW(SQLException, "%s", OraclePreparedStatement_getLastError(P->lastError, P->err));
         }
 }
@@ -293,8 +293,8 @@ static void _execute(T P) {
         P->running = false;
         if (P->lastError != OCI_SUCCESS && P->lastError != OCI_SUCCESS_WITH_INFO)
         {
-                printf("exectue异常\n");
-                printf("execute中查看返回码:%d\n",P->lastError);
+                //printf("exectue异常\n");
+               // printf("execute中查看返回码:%d\n",P->lastError);
                 THROW(SQLException, "%s", OraclePreparedStatement_getLastError(P->lastError, P->err));
         }
                 
@@ -302,7 +302,7 @@ static void _execute(T P) {
          // printf("execute中查看返回码:%d\n",P->lastError);
         if (P->lastError != OCI_SUCCESS && P->lastError != OCI_SUCCESS_WITH_INFO)
         {
-                 printf("exectue111异常\n");
+                 //printf("exectue111异常\n");
                 THROW(SQLException, "%s", OraclePreparedStatement_getLastError(P->lastError, P->err));
         }
                 

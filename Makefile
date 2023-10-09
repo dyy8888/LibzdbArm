@@ -189,7 +189,6 @@ am__objects_1 = src/net/URL.lo
 #	src/db/sqlite/SQLiteResultSet.lo \
 #	src/db/sqlite/SQLitePreparedStatement.lo \
 #	src/db/sqlite/SQLiteAdapter.lo
-
 am__objects_5 = src/db/oracle/OracleConnection.lo \
 	src/db/oracle/OracleResultSet.lo \
 	src/db/oracle/OraclePreparedStatement.lo \

@@ -27,7 +27,6 @@ uname -v = #1 SMP Fri Aug 7 13:35:33 CST 2020
 /usr/bin/oslevel       = unknown
 /bin/universe          = unknown
 
-PATH: /usr/share/Modules/bin
 PATH: /usr/local/sbin
 PATH: /usr/local/bin
 PATH: /usr/sbin
@@ -229,11 +228,11 @@ configure:4970: checking lex output file root
 configure:4984: result: lex.yy
 configure:4989: checking lex library
 configure:5003: gcc -o conftest -g -O2   conftest.c   >&5
-/usr/bin/ld: /tmp/ccUPVKVE.o: in function `input':
+/usr/bin/ld: /tmp/ccVd69Xb.o: in function `input':
 /root/LibzdbArm-main/lex.yy.c:1185: undefined reference to `yywrap'
-/usr/bin/ld: /tmp/ccUPVKVE.o: in function `yylex':
+/usr/bin/ld: /tmp/ccVd69Xb.o: in function `yylex':
 /root/LibzdbArm-main/lex.yy.c:879: undefined reference to `yywrap'
-/usr/bin/ld: /tmp/ccUPVKVE.o: in function `main':
+/usr/bin/ld: /tmp/ccVd69Xb.o: in function `main':
 /root/LibzdbArm-main/conftest.l:18: undefined reference to `yywrap'
 collect2: error: ld returned 1 exit status
 configure:5003: $? = 1
@@ -5642,11 +5641,11 @@ configure: failed program was:
 configure:5013: result: none needed
 configure:5019: checking whether yytext is a pointer
 configure:5036: gcc -o conftest -g -O2   conftest.c   >&5
-/usr/bin/ld: /tmp/ccO8kPJm.o: in function `input':
+/usr/bin/ld: /tmp/ccMfW54z.o: in function `input':
 /root/LibzdbArm-main/lex.yy.c:1185: undefined reference to `yywrap'
-/usr/bin/ld: /tmp/ccO8kPJm.o: in function `yylex':
+/usr/bin/ld: /tmp/ccMfW54z.o: in function `yylex':
 /root/LibzdbArm-main/lex.yy.c:879: undefined reference to `yywrap'
-/usr/bin/ld: /tmp/ccO8kPJm.o: in function `main':
+/usr/bin/ld: /tmp/ccMfW54z.o: in function `main':
 /root/LibzdbArm-main/conftest.l:18: undefined reference to `yywrap'
 collect2: error: ld returned 1 exit status
 configure:5036: $? = 1
@@ -7736,7 +7735,7 @@ configure:12054: $? = 0
 configure:12054: result: yes
 configure:12068: checking for library containing pthread_create
 configure:12099: gcc -o conftest -g -O2   conftest.c  >&5
-/usr/bin/ld: /tmp/ccazTNin.o: in function `main':
+/usr/bin/ld: /tmp/cc0AVd02.o: in function `main':
 /root/LibzdbArm-main/conftest.c:36: undefined reference to `pthread_create'
 collect2: error: ld returned 1 exit status
 configure:12099: $? = 1
@@ -7807,7 +7806,7 @@ configure:12405: checking for SQLite3
 configure:12571: result: yes
 configure:12573: checking for library containing sqlite3_open
 configure:12604: gcc -o conftest -g -O2 -I/usr/include/mysql  -L/usr/lib64/mysql -lmysqlclient -lpthread -ldl -lssl -lcrypto -lresolv -lm -lrt  conftest.c -lpthread  >&5
-/usr/bin/ld: /tmp/cci5UC8p.o: in function `main':
+/usr/bin/ld: /tmp/cceWg3Zz.o: in function `main':
 /root/LibzdbArm-main/conftest.c:38: undefined reference to `sqlite3_open'
 collect2: error: ld returned 1 exit status
 configure:12604: $? = 1
